@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    background-color: #4a358c;
+    color: #defeff;
+    margin: 20px; 
+}
+h1 {
+    font-family: Arial, serif;
+    font-size: 26pt;
+    color: #e3e7b8;
+    text-align: center;
+}
+
+h2 {
+    font-family: Arial, serif;
+    font-size: 20pt;
+    color: #f2ff00;
+}
+
+h3 {
+    font-family: Arial, serif;
+    font-size: 20pt;
+    color: #19ff20;
+}
+
+p {
+    font-size: 20pt;
+    color: #19ff20;
+}
+
+a:link,
+a:visited {
+    color: #19ff20;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #19ff20;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #19ff20;
+}
+
+/* CSS Table Layout */
+.table-container {
+    display: table;
+    width: 100%;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Example Layout */
+.example-table {
+    width: 100%;
+}
+
+.example-table .row {
+    display: table-row;
+}
+
+.example-table .cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.table-container {
+    display: table;
+    width: 100%;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Example Layout */
+.example-table {
+    width: 100%;
+}
+
+.example-table .row {
+    display: table-row;
+}
+
+.example-table .cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.table-container {
+    display: table;
+    width: 100%;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
