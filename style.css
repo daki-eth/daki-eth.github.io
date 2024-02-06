@@ -3,23 +3,25 @@ body {
     font-size: 12pt;
     background-color: #4a358c;
     color: #defeff;
-    margin: 20px; 
+    margin: 20px;
 }
-h1 {
+
+h1, h2, h3 {
     font-family: Arial, serif;
+}
+
+h1 {
     font-size: 26pt;
     color: #e3e7b8;
     text-align: center;
 }
 
 h2 {
-    font-family: Arial, serif;
     font-size: 20pt;
     color: #f2ff00;
 }
 
 h3 {
-    font-family: Arial, serif;
     font-size: 20pt;
     color: #19ff20;
 }
@@ -36,7 +38,6 @@ a:visited {
 }
 
 a:hover {
-    color: #19ff20;
     text-decoration: underline;
 }
 
@@ -60,62 +61,23 @@ a:active {
     border: 1px solid #ccc;
 }
 
-/* Example Layout */
-.example-table {
-    width: 100%;
-}
-
-.example-table .row {
-    display: table-row;
-}
-
-.example-table .cell {
-    display: table-cell;
+.box {
     padding: 10px;
-    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.table-container {
-    display: table;
-    width: 100%;
+.box a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #19ff20;
 }
 
-.row {
-    display: table-row;
+.box a:hover {
+    text-decoration: underline;
 }
 
-.cell {
-    display: table-cell;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-/* Example Layout */
-.example-table {
-    width: 100%;
-}
-
-.example-table .row {
-    display: table-row;
-}
-
-.example-table .cell {
-    display: table-cell;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.table-container {
-    display: table;
-    width: 100%;
-}
-
-.row {
-    display: table-row;
-}
-
-.cell {
-    display: table-cell;
-    padding: 10px;
-    border: 1px solid #ccc;
+.description {
+    font-weight: bold;
+    color: #ffffff;
 }
