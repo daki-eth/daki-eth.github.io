@@ -6,15 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Education</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Include the JavaScript file -->
+    <script src="main.js"></script>
+    <style>
+        /* Style for the image */
+        #myImage {
+            cursor: pointer;
+            width: 200px; /* Initial width */
+            transition: width 0.5s; /* Smooth transition */
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <header>
             <h1>My Education</h1>
-            <h1>Damian Lucic 501123970</h1>
+            <h1 id="nameHeader">Damian Lucic 501123970</h1>
+            <!-- Problem a: Button to prompt user for name -->
+            <button onclick="promptName()">Enter Your Name</button>
+            <p id="output"></p>
         </header>
         <hr>
+        <section>
+            <!-- Problem b: Clickable image -->
+            <img id="myImage" src="/Users/damian/Documents/GitHub/daki-eth.github.io/myimage.jpg" alt="My Image" onclick="toggleImageSize()">
+            <p>Click to Enlarge</p>
+        </section>
+        <nav>
+            <!-- Navigation menu -->
+            <ul id="navigation">
+                <li><a href="index.html" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="toggleDropdown(this)">Services &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="services.html">Our Services</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="clients.html">Our Clients</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="toggleDropdown(this)">About &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="about.html">Overview</a>
+                        <a href="history.html">History</a>
+                        <a href="team.html">Our Team</a>
+                    </div>
+                </li>
+                <li><a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Contact</a></li>
+                <li><a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Portfolio</a></li>
+            </ul>
+        </nav>
         <section>
             <h2>Education</h2>
             <ul>
