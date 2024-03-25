@@ -1,113 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Education</title>
+    <title>My Education - Damian Lucic</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="main.js" defer></script>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>My Education</h1>
-            <h2 id="nameHeader">Damian Lucic 501123970</h2>
-            <!-- Problem a: Button to prompt user for name -->
-            <button onclick="promptName()">Enter Your Name</button>
-            <p id="output"></p>
-        </header>
-        <hr>
-        <section>
-            <!-- Problem b: Clickable image -->
-            <img src="myimage.jpg" id="myImage" alt="My Image" onclick="toggleImageSize()">
-            <p>Click to Enlarge</p>
-        </section>
-        <nav>
-            <!-- Navigation menu -->
-            <ul id="navigation">
-                <li><a href="index.html" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="toggleDropdown(this)">Services &#9662;</a>
-                    <div class="dropdown-content">
-                        <a href="services.html">Our Services</a>
-                        <a href="pricing.html">Pricing</a>
-                        <a href="clients.html">Our Clients</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)" onclick="toggleDropdown(this)">About &#9662;</a>
-                    <div class="dropdown-content">
-                        <a href="about.html">Overview</a>
-                        <a href="history.html">History</a>
-                        <a href="team.html">Our Team</a>
-                    </div>
-                </li>
-                <li><a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Contact</a></li>
-                <li><a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Portfolio</a></li>
-            </ul>
-        </nav>
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li>High School: Martingrove Collegiate Institution(2017 - 2021)</li>
-                <li>University: Toronto Metropolitan University (Ryerson) (2021 - 2025)</li>
-            </ul>
-            <h2>Courses/Program</h2>
-            <ul>
-                <li>I'm currently enrolled in the Business and Technology Management (BTM) program,
-                    with a minor in Computer Science.
-                    I am looking forward to diving into web design in one of my upcoming classes!
-                    While I have a keen interest in computer science, I also enjoy the business aspects,
-                    which is why I chose the BTM program over a full Computer Science major.</li>
-            </ul>
-            <h3>Most Useful Course</h3>
-            <ul>
-                <li>The CPS 109 course I took has been my most useful course as it taught me
-                    the basics of python which I have used to expanded my programming skills and
-                    has let me learn how to program projects I desire.</li>
-            </ul>
-            <h2>Educational Awards</h2>
-            <ul>
-                <li>Honours (2021)</li>
-            </ul>
-            <h2>Extra-curricular Activities</h2>
-            <ul>
-                <li>Member of the Electric car team</li>
-                <li>MMA and BJJ training at Xtreme Couture Toronto Gym</li>
-                <li>Programing auto checkout bots</li>
-                <li>TMU Volleyball Intramurals</li>
-            </ul>
-            <hr>
-        </section>
-        <footer>
-            <h2>Contact Information:</h2>
-            <div class="table-container">
-                <div class="row">
-                    <div class="cell">
-                        <div class="box">
-                            <a href="https://www.linkedin.com/in/damian-lucic/">LinkedIn</a>
-                        </div>
-                    </div>
-                    <div class="cell">
-                        <div class="box">
-                            <a href="mailto:damian.lucic@torontmu.ca">Email</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="cell">
-                        <div class="description">Access to my in-depth Professional Profile</div>
-                    </div>
-                    <div class="cell">
-                        <div class="description">Email me any questions you may have at the above email</div>
-                    </div>
+    <header class="site-header">
+        <h1 class="header-title">Damian Lucic</h1>
+        <nav class="site-nav">
+            <div class="dropdown">
+                <button class="dropbtn">Services</button>
+                <div class="dropdown-content">
+                    <a href="#">Service 1</a>
+                    <a href="#">Service 2</a>
+                    <a href="#">Service 3</a>
                 </div>
             </div>
-            <p>My <a href="https://www.example.com">personal website</a>.</p>
-        </footer>
+            <div class="dropdown">
+                <button class="dropbtn">About</button>
+                <div class="dropdown-content">
+                    <a href="#">About Me</a>
+                    <a href="#">My Resume</a>
+                    <a href="#">Testimonials</a>
+                </div>
+            </div>
+            <button class="header-btn">Portfolio</button>
+            <button class="header-btn contact-btn">Contact Now!</button>
+        </nav>
+    </header>
+    
+<!-- Navigation menu -->
+<nav class="navbar">
+    <div id="bitcoinPriceContainer" class="bitcoin-price">
+        <span id="bitcoinPrice">BTC Price: Loading...</span>
     </div>
-    <script src="main.js"></script>
-</body>
+</nav>
 
+
+    
+    <main class="main-content">
+        <section class="image-section">
+            <img src="myimage.jpg" id="myImage" alt="Damian Lucic" class="responsive-image">
+            <p class="image-caption">Click to Enlarge</p>
+        </section>
+        
+        <section class="education-section">
+            <h2 class="section-title">Education</h2>
+            <ul class="education-list">
+                <li>High School: Martingrove Collegiate Institution (2017 - 2021)</li>
+                <li>University: Toronto Metropolitan University (Ryerson) (2021 - 2025)</li>
+            </ul>
+        </section>
+        
+        <section class="courses-section">
+            <h2 class="section-title">Courses/Program</h2>
+            <p>I'm currently enrolled in the Business and Technology Management (BTM) program, with a minor in Computer Science. I am looking forward to diving into web design in one of my upcoming classes! While I have a keen interest in computer science, I also enjoy the business aspects, which is why I chose the BTM program over a full Computer Science major.</p>
+        </section>
+        
+        <section class="useful-course-section">
+            <h3 class="section-subtitle">Most Useful Course</h3>
+            <p>The CPS 109 course I took has been my most useful course as it taught me the basics of python which I have used to expand my programming skills and has let me learn how to program projects I desire.</p>
+        </section>
+        
+        <section class="awards-section">
+            <h2 class="section-title">Educational Awards</h2>
+            <ul class="awards-list">
+                <li>Honours (2021)</li>
+            </ul>
+        </section>
+        
+        <section class="activities-section">
+            <h2 class="section-title">Extra-curricular Activities</h2>
+            <ul class="activities-list">
+                <li>Member of the Electric car team</li>
+                <li>MMA and BJJ training at Xtreme Couture Toronto Gym</li>
+                <li>Programming auto checkout bots</li>
+                <li>TMU Volleyball Intramurals</li>
+            </ul>
+        </section>
+    </main>
+    
+    <section class="partnerships">
+        <h2>My Partnerships</h2>
+        <div class="partners">
+            <a href="https://linktr.ee/betpulse" target="_blank" class="partner-link">
+                <img src="http://www.yourwebsite.com/path/to/BetPulse.jpg" alt="BetPulse" class="partner-logo">
+            </a>
+            <!-- Add other partner links as needed -->
+        </div>
+    </section>
+    
+
+
+    <form id="myForm">
+        <h2>Contact Us</h2>
+        
+        <!-- Single Text Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <!-- Radio Buttons -->
+        <label>Are you a current user?</label><br>
+        <input type="radio" id="userYes" name="currentUser" value="yes">
+        <label for="userYes">Yes</label><br>
+        <input type="radio" id="userNo" name="currentUser" value="no">
+        <label for="userNo">No</label><br><br>
+        
+        <!-- Check Boxes -->
+        <label>What services are you interested in?</label><br>
+        <input type="checkbox" id="service1" name="service" value="Web Design">
+        <label for="service1">Web Design</label><br>
+        <input type="checkbox" id="service2" name="service" value="SEO">
+        <label for="service2">SEO</label><br>
+        <input type="checkbox" id="service3" name="service" value="Marketing">
+        <label for="service3">Marketing</label><br><br>
+        
+        <!-- Single Text Field for Subject -->
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+        
+        <!-- Multiple Text Field (Textarea) -->
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        
+        <!-- Dropdown -->
+        <label for="priority">Priority:</label>
+        <select name="priority" id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br><br>
+        
+        <!-- Submit and Reset Buttons -->
+        <button type="button" onclick="submitForm()">Submit</button>
+        <button type="reset">Clear</button>
+    </form>
+    
+    <footer class="social-media-footer">
+        <a href="https://www.linkedin.com/in/damian-lucic/" target="_blank" class="footer-social-link">
+            <img src="linkedin.png" alt="LinkedIn" class="footer-social-logo">
+        </a>
+        <a href="https://twitter.com/DakiCrypto" target="_blank" class="footer-social-link">
+            <img src="/daki-eth.github.io/Twitter.png" alt="Twitter" class="footer-social-logo">
+        </a>
+        <a href="https://www.instagram.com/daki.eth/" target="_blank" class="footer-social-link">
+            <img src="Instagram.jpg" alt="Instagram" class="footer-social-logo">
+        </a>
+
+        <h2>Contact Information:</h2>
+    <div class="contact-container">
+        <div class="contact-item">
+            <img src="linkedin.png" alt="LinkedIn Logo" class="contact-icon">
+            <a href="https://www.linkedin.com/in/damian-lucic/" class="contact-link">LinkedIn</a>
+        </div>
+        <div class="contact-item">
+            <img src="email-icon.png" alt="Email Icon" class="contact-icon"><!-- Ensure you have an email icon image -->
+            <a href="mailto:damian.lucic@torontmu.ca" class="contact-link">Email</a>
+        </div>
+        <!-- Add additional contact items here -->
+    </div>
+    <p>Visit my <a href="https://www.example.com" class="personal-website">personal website</a>.</p>
+    </footer>
+
+</body>
 </html>

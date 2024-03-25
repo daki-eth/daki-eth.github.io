@@ -1,61 +1,330 @@
-/* External CSS for improved design */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    margin: 20px;
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body, h1, h2, h3, p, ul, li, a {
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
-h1 {
-    font-size: 28px;
-    color: #4a90e2;
+/* Header styles */
+.header {
+    background-color: #f8f8f8;
+    padding: 20px;
     text-align: center;
 }
 
-h2 {
-    font-size: 24px;
-    color: #555;
+.header-content {
+    display: inline-block;
+}
+
+.header-title {
     margin-bottom: 10px;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-button {
-    background-color: #4a90e2;
-    color: #fff;
-    border: none;
+.header-button {
+    cursor: pointer;
     padding: 10px 20px;
-    font-size: 16
+    background-color: #005f73;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header-button:hover {
+    background-color: #0a9396;
+}
+
+.header-output {
+    margin-top: 10px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #333; /* Example background color for navbar */
+    color: #fff; /* Example text color */
+}
+
+.bitcoin-price {
+    font-size: 1rem; /* Example font size */
+    padding: 10px; /* Example padding */
+}
+
+
+.nav-list {
+    list-style: none;
+    display: flex; /* This will place all items in a row */
+    justify-content: center; /* Center items in the nav */
+    align-items: center; /* Vertically align items in the nav */
+    padding: 10px;
+    margin: 0;
+}
+
+.nav-link, .drop-button {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: flex; /* Align text within the link/button */
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+/* Make sure the button has no additional padding or borders */
+.drop-button {
+    background-color: #333; /* Match the navbar background */
+    border: none;
+    cursor: pointer;
+    display: inline-block; /* Aligns the button as an inline element */
+    margin: 0; /* Ensure there is no margin collapsing with other elements */
+    vertical-align: middle; /* Aligns the button vertically */
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative; /* Needed for absolute positioning of dropdown-content */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown content */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Dropdown links are full-width */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 20px;
+}
+
+.image-section, .education-section, .courses-section, .useful-course-section, .awards-section, .activities-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    margin-bottom: 5px;
+}
+
+.responsive-image {
+    width: 200px; /* Initial width, matches the JavaScript condition */
+    height: auto; /* Maintain aspect ratio */
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.image-caption {
+    text-align: left;
+    margin-top: 5px;
+}
+
+.partnerships {
+    text-align: left; /* Center the content */
+    padding: 20px;
+}
+
+.partnerships h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.partner-link {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 50%; /* Creates circle borders */
+    overflow: hidden; /* Ensures the image stays within the circle shape */
+    width: 100px; /* Width of the circle */
+    height: 100px; /* Height of the circle */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Optional: Adds a shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.partner-link:hover {
+    transform: scale(1.1); /* Enlarges the circle on hover */
+}
+
+.partner-logo {
+    width: 100%; /* Ensures the logo fills the circle */
+    height: 100%; /* Ensures the logo fills the circle */
+    object-fit: cover; /* Ensures the logo covers the circle */
+    display: block; /* Removes any extra space inside the link */
+}
+
+
+/* Footer styles */
+.footer-social-links {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.footer-social-link {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px; /* Size of the circular images */
+    height: 50px; /* Size of the circular images */
+}
+
+.footer-social-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social-link:hover {
+    transform: scale(1.1);
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #21273e; 
+}
+
+.header-title {
+    font-size: 2em; /* Large font size for the name */
+    margin: 0; 
+    color : #ffffff;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+ /* General button styling */
+.header-btn {
+    padding: 10px 20px;
+    margin-left: 10px; /* Space between buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white; /* Text color */
+    text-transform: uppercase; /* Capitalize text */
+    font-weight: bold; /* Bold font */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Button hover effect */
+.header-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Specific styles for the 'Contact Now!' button to make it stand out */
+.contact-btn {
+    background-color: #28a745; /* Bootstrap success green */
+}
+
+.contact-btn:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+
+/* Add this if your buttons are links to remove default link color */
+.header-btn:link, .header-btn:visited {
+    color: white; /* Ensures the text color is white even for links */
+}
+
+.contact-btn {
+    background-color: #008CBA; /* Different color for the Contact Now! button */
+}
+
+.contact-btn:hover {
+    background-color: #005f73;
+}
+
+
+.contact-info {
+    margin: 20px 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
