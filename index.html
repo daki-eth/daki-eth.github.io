@@ -109,12 +109,20 @@
         </div>
     </section>
     
-
-
-    <!-- Contact Us Section -->
+    <div id="accessibility-options" aria-label="Accessibility Options">
+        <img src="accessability.png" alt="Accessibility Options" id="accessibility-trigger" role="button" aria-haspopup="true" aria-controls="options" style="cursor: pointer;">
+        <div id="options" class="hidden" aria-hidden="true" style="text-align: center;">
+            <button id="increase-font-size" aria-label="Increase-text-size" style="margin: 5px;">Increase text size</button>
+            <button id="decrease-font-size" aria-label="Decrease-text-size" style="margin: 5px;">Decrease text size</button>
+            <button id="toggle-color-theme" aria-label="Toggle-color-theme" style="margin: 5px;">Toggle color theme</button>
+            <button id="reset-accessibility" aria-label="Reset-accessibility" style="margin: 5px;">Reset settings</button>
+        </div>
+    </div>
+    
+    <!-- Contact Me Section -->
 <section class="contact-section">
     <div class="rounded-box">
-        <h2>Contact Us</h2>
+        <h2>Contact Me</h2>
         <form id="myForm">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -164,6 +172,8 @@
             </div>
             
             <div class="form-actions">
+                <button id="keyboardButton" onclick="showOnScreenKeyboard()">On-Screen Keyboard</button>
+                
                 <button type="submit" class="btn submit-btn">Submit</button>
                 <button type="reset" class="btn reset-btn">Clear</button>
             </div>
